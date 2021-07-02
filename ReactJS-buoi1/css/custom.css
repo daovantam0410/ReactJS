@@ -1,0 +1,35 @@
+.table-index{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 250px;
+}
+
+#product-form{
+    width: 352px;
+}
+
+#content{
+    margin-bottom: 35px;
+}
+
+.input-form{
+    float: right;
+    width: 183px;
+}
+
+.font-title{
+    text-align: left;
+}
+
+.form1{
+    margin-bottom: 10px;
+}
+
+.card-body{
+    color: #F2FFFF;
+}
+
+.footer-text{
+    color: #F2FFFF;
+}

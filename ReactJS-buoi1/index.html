@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/custom.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Trang quan tri</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Product <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+        </nav>
+
+        <div class="row">
+            <!-- Content -->
+            <div class="table-responsive">
+                <table class="table table-index">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="line1">
+                        <th scope="row">1</th>
+                        <td>Áo</td>
+                        <td>120000</td>
+                        <td>
+                            <div>
+                                <a href="FormProduct.html"><button type="button" class="btn btn-primary">Edit</button></a>
+                                <a><button type="button" class="btn btn-danger delete" onclick="xoa1()">Delete</button></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="line2">
+                        <th scope="row">2</th>
+                        <td>Áo</td>
+                        <td>12232000</td>
+                        <td>
+                            <div>
+                                <a href="FormProduct.html"><button type="button" class="btn btn-primary">Edit</button></a>
+                                <button type="button" class="btn btn-danger" onclick="xoa2()">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="line3">
+                        <th scope="row">3</th>
+                        <td>22</td>
+                        <td>11</td>
+                        <td>
+                            <div>
+                                <a href="FormProduct.html"><button type="button" class="btn btn-primary">Edit</button></a>
+                                <button type="button" class="btn btn-danger" onclick="xoa3()">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+	<div class="container nav-top nav-color" style="background-color: #343A40;">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<b class="footer-text">Hãy kết nối với tôi!</b>
+				</ul>
+			</div>
+		</nav>
+
+		<hr style="margin-top: 0">
+
+		<div class="row">
+
+			<div class="col-md-4">
+				<div class="">
+			  		<div class="card-body">
+			    		<h5 class="card-title">Thông tin liên hệ</h5>
+			    		<p class="card-text">Địa chỉ: Tổ 2, Phường Giang Biên, Quận Long Biên, Thành phố Hà Nội</p>
+			    		<p class="card-text">Email: tamdv@gmail.com</p>
+			    		<p class="card-text">Hotline: 0123456789</p>
+			  		</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="">
+			  		<div class="card-body">
+			    		<h5 class="card-title">Chính sách</h5>
+			    		<p class="card-text">Chính sách vận chuyển</p>
+			    		<p class="card-text">Chính sách đổi trả</p>
+			    		<p class="card-text">Chính sách sử dụng</p>
+			  		</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="">
+			  		<div class="card-body">
+			    		<h5 class="card-title">Hỗ trợ</h5>
+			    		<p class="card-text">"Từ 8:00 - 17:00 tất cả các ngày trong tuần"</p>
+			  		</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<hr>
+
+		<div class="row">
+			<div class="col-md-12 footer-text">
+				<p style="text-align: center;">© 2021 DaoVanTam. All rights reserved</p>
+			</div>
+		</div>
+	</div>
+    </div>
+</body>
+</html>
