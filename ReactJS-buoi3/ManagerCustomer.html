@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Quản lý khách hàng</h2>
+        <fieldset>
+            <legend>Danh sách khách hàng</legend>
+            <table border="1" style="border-collapse: collapse;">
+                <tr>
+                    <th>STT</th>
+                    <th>Tên</th>
+                    <th>Giới tính</th>
+                    <th>Số điện thoại</th>
+                    <th>Email</th>
+                    <th>Xử lý</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Nam</td>
+                    <td>09545452</td>
+                    <td></td>
+                    <td>
+                        <button>Thêm</button>
+                        <button>Sửa</button>
+                        <button>Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Nguyễn Văn B</td>
+                    <td>Nam</td>
+                    <td>09545452</td>
+                    <td></td>
+                    <td>
+                        <button>Thêm</button>
+                        <button>Sửa</button>
+                        <button>Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Nguyễn Văn C</td>
+                    <td>Nam</td>
+                    <td>09545452</td>
+                    <td></td>
+                    <td>
+                        <button>Thêm</button>
+                        <button>Sửa</button>
+                        <button>Xóa</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Danh sách sản phẩm</legend>
+            <form action="">
+                <label>Tên khách hàng</label>
+                <input type="text"><br>
+                <label>Số điện thoại</label>
+                <input type="number" min="0" maxlength="11"><br>
+                <label>Giới tính</label>
+                <input type="radio" name="gioiTinh" value="0">Nam</input>
+                <input type="radio" name="gioiTinh" value="1">Nữ</input><br>
+                <label>Email</label>
+                <input type="email" name="" id=""><br>
+                <label>Ngày sinh</label>
+                <input type="date" name="" id=""><br>
+                <label>Địa chỉ</label>
+                <textarea name="diaChi" id="diaChi"></textarea><br><br>
+                <button type="submit">Lưu</button>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
