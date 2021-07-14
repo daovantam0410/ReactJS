@@ -4,67 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
     <title>Quản lý sản phẩm</title>
 </head>
 <body>
-    <div>
-        <h2>Quản lý sản phẩm</h2>
-        <fieldset>
-            <legend>Danh sách sản phẩm</legend>
-            <table border="1" style="border-collapse: collapse;">
-                <tr>
-                    <th>STT</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Giá</th>
-                    <th>Đơn vị tính</th>
-                    <th>Xử lý</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Áo thun</td>
-                    <td>500000</td>
-                    <td>Cái</td>
-                    <td>
-                        <button>Thêm</button>
-                        <button>Sửa</button>
-                        <button>Xóa</button>
-                    </td>
-                </tr>
-            </table>
-        </fieldset>
-        <fieldset>
-            <legend>Nhập thông tin sản phẩm</legend>
-            <form action="">
-                <label for="">Tên sản phẩm</label>
-                <input type="text" autocomplete="on" placeholder="Nhập tên sản phẩm ..." id="tenSanPham" value="" maxlength="50" autofocus required><br>
-                <label for="">Mã sản phẩm</label>
-                <input type="text" placeholder="Nhập mã sản phẩm ..." id="maSanPham" name="maSanPham" required maxlength="5"><br>
-                <label for="">Loại sản phẩm</label>
-                <input type="checkbox" name="loaiSanPham" value="1">Đồ gia dụng</input>
-                <input type="checkbox" name="loaiSanPham" value="2">Đồ gia dụng</input>
-                <input type="checkbox" name="loaiSanPham" value="3">Sách</input>
-                <input type="checkbox" name="loaiSanPham" value="4">Thiết bị</input><br>
-                <label for="">Đơn vị tính</label>
-                <select name="" id="DonViTinh">
-                    <option value="">---Chọn đơn vị tính---</option>
-                    <option value="1">Chiếc</option>
-                    <option value="2">Cái</option>
-                    <option value="3">Lô</option>
-                    <option value="4">Thùng</option>
-                </select><br>
-                <label for="">Giá</label>
-                <input type="number" name="gia" id="gia" value="10000" min="0" max="1000000000"><br>
-                <label for="">Ngày nhập</label>
-                <input type="date" name="" id=""><br>
-                <label for="">Mô tả</label>
-                <textarea name="" id=""></textarea><br>
-                <input type="file" multiple><br><br>
-                <button type="submit">Submit</button>
-            </form>
-        </fieldset>
-    </div>
+    <header>
+        <nav>
+            <li><a href="">Sản phẩm</a></li>
+            <li><a href="">Khách hàng</a></li>
+            <li><a href="">Đặt hàng</a></li>
+            <li><a href="">Danh mục</a></li>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Quản lý sản phẩm</h2>
+            <fieldset>
+                <legend>Danh sách sản phẩm</legend>
+                <table border="1" style="border-collapse: collapse;">
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Đơn vị tính</th>
+                        <th>Xử lý</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Áo thun</td>
+                        <td>500000</td>
+                        <td>Cái</td>
+                        <td>
+                            <button id="icon-button-view">Thêm</button>
+                            <button id="icon-button-edit">Sửa</button>
+                            <button id="icon-button-delete">Xóa</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div class="container">
+            <fieldset>
+                <legend>Nhập thông tin sản phẩm</legend>
+                <form action="">
+                    <label for="">Tên sản phẩm</label>
+                    <input type="text" autocomplete="on" placeholder="Nhập tên sản phẩm ..." id="SanPham" value="" maxlength="50" autofocus required><br>
+                    <label for="">Mã sản phẩm</label>
+                    <input type="text" placeholder="Nhập mã sản phẩm ..." id="maSanPham" name="maSanPham" required maxlength="5"><br>
+                    <label for="">Loại sản phẩm</label>
+                    <input type="checkbox" name="loaiSanPham" value="1">Đồ gia dụng</input>
+                    <input type="checkbox" name="loaiSanPham" value="2">Đồ gia dụng</input>
+                    <input type="checkbox" name="loaiSanPham" value="3">Sách</input>
+                    <input type="checkbox" name="loaiSanPham" value="4">Thiết bị</input><br>
+                    <label for="">Đơn vị tính</label>
+                    <select name="" id="DonViTinh">
+                        <option value="">---Chọn đơn vị tính---</option>
+                        <option value="1">Chiếc</option>
+                        <option value="2">Cái</option>
+                        <option value="3">Lô</option>
+                        <option value="4">Thùng</option>
+                    </select><br>
+                    <label for="">Giá</label>
+                    <input type="number" name="gia" id="gia" value="10000" min="0" max="1000000000"><br>
+                    <label for="">Ngày nhập</label>
+                    <input type="date" name="" id=""><br>
+                    <label for="">Mô tả</label>
+                    <textarea name="" id=""></textarea><br>
+                    <input type="file" multiple><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </fieldset>
+        </div>
+    </main>
     <footer>
-
+        @Coppy right dao van tam
     </footer>
 </body>
 </html>
