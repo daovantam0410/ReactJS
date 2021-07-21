@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>Quản lý sản phẩm</title>
 </head>
 <body>
+    <!-- Header -->
     <header>
+        <!-- Menu -->
         <nav>
-            <li><a href="">Sản phẩm</a></li>
-            <li><a href="">Khách hàng</a></li>
-            <li><a href="">Đặt hàng</a></li>
-            <li><a href="">Danh mục</a></li>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="ManagerProduct.html">Sản phẩm</a></li>
+            <li><a href="ManagerProduct.html">Khách hàng</a></li>
+            <li><a href="#">Đặt hàng</a></li>
+            <li><a href="#">Danh mục</a></li>
         </nav>
     </header>
+    <!-- Content -->
     <main>
         <div class="container">
-            <h2>Quản lý sản phẩm</h2>
+            <!-- <h2>Quản lý sản phẩm</h2> -->
             <fieldset>
                 <legend>Danh sách sản phẩm</legend>
-                <table border="1" style="border-collapse: collapse;">
+                <table class="table">
                     <tr>
                         <th>STT</th>
                         <th>Tên sản phẩm</th>
@@ -35,49 +39,152 @@
                         <td>500000</td>
                         <td>Cái</td>
                         <td>
-                            <button id="icon-button-view">Thêm</button>
-                            <button id="icon-button-edit">Sửa</button>
-                            <button id="icon-button-delete">Xóa</button>
+                            <button class="button-view" title="Xem"></button>
+                            <button class="button-edit" title="Sửa"></button>
+                            <button class="button-delete" title="Xóa"></button>
                         </td>
                     </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Áo thun</td>
+                        <td>500000</td>
+                        <td>Cái</td>
+                        <td>
+                            <button class="button-view" title="Xem"></button>
+                            <button class="button-edit" title="Sửa"></button>
+                            <button class="button-delete" title="Xóa"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Áo thun</td>
+                        <td>500000</td>
+                        <td>Cái</td>
+                        <td>
+                            <button class="button-view" title="Xem"></button>
+                            <button class="button-edit" title="Sửa"></button>
+                            <button class="button-delete" title="Xóa"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Áo thun</td>
+                        <td>500000</td>
+                        <td>Cái</td>
+                        <td>
+                            <button class="button-view" title="Xem"></button>
+                            <button class="button-edit" title="Sửa"></button>
+                            <button class="button-delete" title="Xóa"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Áo thun</td>
+                        <td>500000</td>
+                        <td>Cái</td>
+                        <td>
+                            <button class="button-view" title="Xem"></button>
+                            <button class="button-edit" title="Sửa"></button>
+                            <button class="button-delete" title="Xóa"></button>
+                        </td>
+                    </tr>
+                    
                 </table>
             </fieldset>
         </div>
         <div class="container">
             <fieldset>
-                <legend>Nhập thông tin sản phẩm</legend>
-                <form action="">
-                    <label for="">Tên sản phẩm</label>
-                    <input type="text" autocomplete="on" placeholder="Nhập tên sản phẩm ..." id="SanPham" value="" maxlength="50" autofocus required><br>
-                    <label for="">Mã sản phẩm</label>
-                    <input type="text" placeholder="Nhập mã sản phẩm ..." id="maSanPham" name="maSanPham" required maxlength="5"><br>
-                    <label for="">Loại sản phẩm</label>
-                    <input type="checkbox" name="loaiSanPham" value="1">Đồ gia dụng</input>
-                    <input type="checkbox" name="loaiSanPham" value="2">Đồ gia dụng</input>
-                    <input type="checkbox" name="loaiSanPham" value="3">Sách</input>
-                    <input type="checkbox" name="loaiSanPham" value="4">Thiết bị</input><br>
-                    <label for="">Đơn vị tính</label>
-                    <select name="" id="DonViTinh">
-                        <option value="">---Chọn đơn vị tính---</option>
-                        <option value="1">Chiếc</option>
-                        <option value="2">Cái</option>
-                        <option value="3">Lô</option>
-                        <option value="4">Thùng</option>
-                    </select><br>
-                    <label for="">Giá</label>
-                    <input type="number" name="gia" id="gia" value="10000" min="0" max="1000000000"><br>
-                    <label for="">Ngày nhập</label>
-                    <input type="date" name="" id=""><br>
-                    <label for="">Mô tả</label>
-                    <textarea name="" id=""></textarea><br>
-                    <input type="file" multiple><br><br>
+                <legend>Thông tin sản phẩm</legend>
+                <form>
+                    <div class="row-item">
+                        <div class="div-30">
+                            <label>Tên sản phẩm:</label>
+                        </div>
+                        <div class="div-70">
+                            <input class="form-control" type="text" autocomplete="on" placeholder="Nhập tên sản phẩm ..." id="SanPham" value="" maxlength="50" autofocus required>
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="div-30">
+                            <label for="" class="div-30">Mã sản phẩm:</label>
+                        </div>
+                        <div class="div-70">
+                            <input class="form-control" type="text" placeholder="Nhập mã sản phẩm ..." id="maSanPham" name="maSanPham" required maxlength="5"><br>
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="div-30">
+                            <label for="">Loại sản phẩm:</label>
+                        </div>
+                        <div class="div-70">
+                            <input class="checkbox" type="checkbox" name="loaiSanPham" value="1">Hàng gia dụng</input>
+                            <input class="checkbox" type="checkbox" name="loaiSanPham" value="2">Hàng nhập khẩu</input>
+                            <input class="checkbox" type="checkbox" name="loaiSanPham" value="3">Sách</input>
+                            <input class="checkbox" type="checkbox" name="loaiSanPham" value="4">Thiết bị</input>
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="div-30">
+                            <label for="">Đơn vị tính:</label>
+                        </div>
+                        <div class="div-70">
+                            <select  name="" id="DonViTinh">
+                                <option value="">---Chọn đơn vị tính---</option>
+                                <option value="1">Chiếc</option>
+                                <option value="2">Cái</option>
+                                <option value="3">Lô</option>
+                                <option value="4">Thùng</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="div-30">
+                            <label for="">Giá:</label>
+                        </div>
+                        <div class="div-70">
+                            <input class="form-control" type="number" name="gia" id="gia" value="10000" min="0" max="1000000000">
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="div-30">
+                            <label for="">Ngày nhập:</label>
+                        </div>
+                        <div class="div-70">
+                            <input class="form-control" type="date" name="" id="">
+                        </div>
+                    </div>
+
+                    <div class="row-item">
+                        <div class="div-30">
+                            <label for="">Mô tả:</label>
+                        </div>
+                        <div class="div-70">
+                            <textarea class="form-control" name="" id=""></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="row-item">
+                        <div class="div-30">
+                            
+                        </div>
+                        <div class="div-70">
+                            <input type="file" multiple>
+                        </div>
+                    </div>
+                   
                     <button type="submit">Submit</button>
                 </form>
             </fieldset>
         </div>
     </main>
+    <!-- Footer -->
     <footer>
-        @Coppy right dao van tam
+        Copyright © 2021
     </footer>
 </body>
 </html>
