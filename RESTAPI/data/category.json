@@ -1,0 +1,12 @@
+[
+    {
+        "Id": 1,
+        "Name": "Quần áo",
+        "Type": 1
+    },
+    {
+        "Id": 2,
+        "Name": "Thiết bị điện tử",
+        "Type": 2
+    }
+]
