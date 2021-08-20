@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/product.js"></script>
     <title>Quản lý sản phẩm</title>
 </head>
-<body>
+<body onload="">
     <!-- Header -->
     <header>
         <!-- Menu -->
@@ -33,17 +34,18 @@
                         <th>Đơn vị tính</th>
                         <th>Xử lý</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Áo thun</td>
-                        <td>500000</td>
-                        <td>Cái</td>
-                        <td>
-                            <button class="button-view" title="Xem"></button>
-                            <button class="button-edit" title="Sửa"></button>
-                            <button class="button-delete" title="Xóa"></button>
-                        </td>
-                    </tr>
+                    <tbody id="bodyTable">
+                        <tr>
+                            <td>1</td>
+                            <td>Áo thun</td>
+                            <td>500000</td>
+                            <td>Cái</td>
+                            <td>
+                                <button class="button-view" title="Xem"></button>
+                                <button class="button-edit" title="Sửa"></button>
+                                <button class="button-delete" title="Xóa"></button>
+                            </td>
+                        </tr>
                     <tr>
                         <td>2</td>
                         <td>Áo thun</td>
@@ -88,20 +90,20 @@
                             <button class="button-delete" title="Xóa"></button>
                         </td>
                     </tr>
-                    
+                    </tbody>
                 </table>
             </fieldset>
         </div>
         <div class="container">
             <fieldset>
-                <legend>Thông tin sản phẩm</legend>
+                <legend id="formTitle">Thông tin sản phẩm</legend>
                 <form>
                     <div class="row-item">
                         <div class="div-30">
                             <label>Tên sản phẩm:</label>
                         </div>
                         <div class="div-70">
-                            <input class="form-control" type="text" autocomplete="on" placeholder="Nhập tên sản phẩm ..." id="SanPham" value="" maxlength="50" autofocus required>
+                            <input class="form-control" type="text" autocomplete="on" placeholder="Nhập tên sản phẩm ..." id="productName" value="" maxlength="50">
                         </div>
                     </div>
 
@@ -110,7 +112,7 @@
                             <label for="" class="div-30">Mã sản phẩm:</label>
                         </div>
                         <div class="div-70">
-                            <input class="form-control" type="text" placeholder="Nhập mã sản phẩm ..." id="maSanPham" name="maSanPham" required maxlength="5"><br>
+                            <input class="form-control" type="text" placeholder="Nhập mã sản phẩm ..." id="maSanPham" name="maSanPham" maxlength="5" onchange="changeValue()" onfocus="changeColor(this)"><br>
                         </div>
                     </div>
 
@@ -177,7 +179,7 @@
                         </div>
                     </div>
                    
-                    <button type="submit">Submit</button>
+                    <button type="submit" onclick="SaveProduct()">Submit</button>
                 </form>
             </fieldset>
         </div>
