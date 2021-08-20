@@ -1,0 +1,161 @@
+header {
+    background-color: rgb(112, 95, 95);
+    width: auto;
+    height: 60px;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+nav {
+    text-align: center;
+    height: 100%;
+}
+
+
+.button-edit, .button-view, .button-delete {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none;
+    background-color: unset;
+    height: 20px;
+    width: 20px;
+}
+
+.button-view {
+    background-image: url("../image/search.svg");
+}
+
+.button-view:hover {
+    height: 35px;
+    width: 35px;
+}
+
+.button-edit {
+    background-image: url("../image/pencil.svg");
+}
+
+.button-edit:hover {
+    height: 35px;
+    width: 35px;
+}
+
+.button-delete {
+    background-image: url("../image/trash.svg");
+}
+
+.button-delete:hover {
+    height: 35px;
+    width: 35px;
+}
+
+nav li {
+    display: inline-block;
+    width: 10%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav li a {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    padding-top: 0.7em;
+}
+
+footer {
+    width: auto;
+    height: 60px;
+    background-color: rgb(112, 95, 95);
+    display: flex; /* căn giữa theo chiều dọc */
+    justify-content: center; /* dành cho phần tử text */
+    align-items: center;
+    color: white;
+    font-size: large;
+}
+
+main {
+    height: auto;
+    width: 100%;
+    min-height: 500px;
+}
+
+.container{
+    width: 45%;
+    height: 100%;
+    display: inline-block;
+    min-height: 600px;
+    margin-left: 3%;
+}
+
+fieldset {
+    margin-top: 1rem;
+    border-width: 1px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.table {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table td, .table th {
+    border-top: 1px solid gray;
+    padding: .75rem;
+    vertical-align: top;
+    text-align: center;
+}
+
+.table th {
+     background-color: rgb(223, 228, 221);
+}
+
+.table td {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+legend {
+    font-size: x-large;
+}
+
+.row-item {
+    padding: 5px 5px;
+    width: 90%;
+    display: flex;
+}
+
+.div-30 {
+    width: 30%;
+    max-width: 30%;
+}
+
+.div-70 {
+    width: 70%;
+    max-width: 70%;
+}
+
+.div-70 label {
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bbc1c7;
+    border-radius: .25rem;
+}
+
