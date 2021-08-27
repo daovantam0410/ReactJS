@@ -1,1 +1,1 @@
-[{"Id":1,"Name":"Áo thun D&G","CategoryId":1,"Price":2000000,"Description":null,"Promotion":true,"ImportDate":"2017-12-31","Image":""}]
+[{"Id":3,"Name":"Xe đạp","Code":"Asama01","Unit":"1","Price":"5000000","Date":"2020-10-04","Description":"this is my cycle","Type":["2"]},{"Id":"4","Name":"MazdaCX5","Code":"cx5","Unit":"1","Price":"2200000000","Date":"2018-11-24","Description":"this is my car cx5","Type":["2"]}]
