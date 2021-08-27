@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link href="./bootstrap/bootstrap-icons-1.5.0/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index-jquery.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <!-- <script src="./js/product-jquery.js"></script> -->
+    <script src="./js/product-jquery-api.js"></script>
+    <script src="./js/service.js"></script>
+    <title>ManagerProduct</title>
+</head>
+<body>
+    <div id="loading">
+        <img id="loading-image" src="./img/loading1.png" alt="Loading...">
+    </div>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Quản lý sản phẩm</a>
+            <a class="navbar-brand" href="#">Quản lý khách hàng</a>
+            <a class="navbar-brand" href="#">Giới thiệu</a>
+            <a class="navbar-brand" href="#">Liên hệ</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+    </header>
+    <!-- Content -->
+    <main>
+        <div class="container">
+            <!-- <h2>Quản lý sản phẩm</h2> -->
+            <fieldset class="border p-2">
+                <legend class="scheduler-border">Danh sách sản phẩm</legend>
+                
+                <!-- Button trigger modal -->
+                <ul class="nav justify-content-end">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#productModal">
+                        Thêm mới sản phẩm
+                    </button>
+                </ul>
+  
+                <!-- Modal -->
+                <div class="modal fade-end" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Thông tin sản phẩm</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Nội dung form nhập -->
+                                    <form id="productForm">
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Tên sản phẩm:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <input name="Name" class="form-control" type="text" autocomplete="on" placeholder="Nhập tên sản phẩm ..." id="productName" value="" maxlength="50">
+                                                <input type="hidden" id="productId">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Mã sản phẩm:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <input class="form-control" type="text" placeholder="Nhập mã sản phẩm ..." id="productCode" name="maSanPham" maxlength="10"><br>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Loại sản phẩm:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <label><input type="checkbox" name="productType" value="1"> Hàng gia dụng</label>
+                                                <label><input type="checkbox" name="productType" value="2"> Hàng nhập khẩu</label>
+                                                <label><input type="checkbox" name="productType" value="3"> Văn phòng phẩm</label>
+                                                <label><input type="checkbox" name="productType" value="4"> Thiết bị điện tử</label>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Đơn vị tính:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <select  name="" id="productUnit">
+                                                    <option value="">---Chọn đơn vị tính---</option>
+                                                    <option value="1">Chiếc</option>
+                                                    <option value="2">Cái</option>
+                                                    <option value="3">Lô</option>
+                                                    <option value="4">Thùng</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Giá:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <input class="form-control" type="number" name="gia" id="productPrice" placeholder="Nhập giá sản phẩm ..." value="" min="0" max="1000000000">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Ngày nhập:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <input class="form-control" type="date" name="" id="productDate">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Mô tả:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <textarea class="form-control" name="" id="productDescription" placeholder="Nhập mô tả ..."></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                
+                                            </div>
+                                            <div class="div-70">
+                                                <input type="file" multiple>
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                <button type="button" class="btn btn-primary" onclick="SaveProduct()">Lưu thay đổi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table">
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Đơn vị tính</th>
+                        <th>Danh mục</th>
+                        <th>Xử lý</th>
+                    </tr>
+                    <tbody id="bodyTable">
+                        
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+        <div class="container">
+
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-white">
+        <div class="footer-copyright text-center py-3"><p class="navbar-brand">© 2021 Copyright</p></div>
+    </footer>
+</body>
+</html>
