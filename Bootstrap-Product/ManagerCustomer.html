@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link href="./bootstrap/bootstrap-icons-1.5.0/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index-jquery.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <script src="./js/customer.js"></script>
+    <script src="./js/service.js"></script>
+    <title>Quản lý khách hàng</title>
+</head>
+<body>
+    <div id="loading">
+        <img id="loading-image" src="./img/loading1.png" alt="Loading...">
+    </div>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Quản lý sản phẩm</a>
+            <a class="navbar-brand" href="#">Quản lý khách hàng</a>
+            <a class="navbar-brand" href="#">Giới thiệu</a>
+            <a class="navbar-brand" href="#">Liên hệ</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+    </header>
+    <!-- Content -->
+    <main>
+        <div class="container">
+            <!-- <h2>Quản lý sản phẩm</h2> -->
+            <fieldset class="border p-2">
+                <legend class="scheduler-border">Danh sách khách hàng</legend>
+                
+                <!-- Button trigger modal -->
+                <ul class="nav justify-content-end">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#customerModal">
+                        Thêm mới khách hàng
+                    </button>
+                </ul>
+  
+                <!-- Modal -->
+                <div class="modal fade-end" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Thông tin khách hàng</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Nội dung form nhập thông tin khách hàng -->
+                                    <form id="customerForm">
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Tên khách hàng:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <input name="customerName" class="form-control" type="text" autocomplete="on" placeholder="Nhập tên khách hàng ..." id="customerName" value="" maxlength="50">
+                                                <input type="hidden" id="customerId">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Số điện thoại:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <input class="form-control" type="number" placeholder="Nhập số điện thoại ..." id="phone" name="phone" maxlength="10"><br>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Giới tính:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <label><input type="radio" name="customerType" value="1"> Nam</label>
+                                                <label><input type="radio" name="customerType" value="2"> Nữ</label>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Email:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <input class="form-control" type="email" name="customerEmail" id="customerEmail" placeholder="Nhập địa chỉ email ...">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Ngày sinh:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <input class="form-control" type="date" name="" id="customerDate">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="row-item">
+                                            <div class="div-30">
+                                                <label>Địa chỉ:</label>
+                                            </div>
+                                            <div class="div-70">
+                                                <textarea class="form-control" name="" id="customerAddress" placeholder="Nhập địa chỉ ..."></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                <button type="button" class="btn btn-primary" onclick="SaveCustomer()">Lưu thay đổi</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table">
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên khách hàng</th>
+                        <th>Giới tính</th>
+                        <th>Số điện thoại</th>
+                        <th>Email</th>
+                        <th>Xử lý</th>
+                    </tr>
+                    <tbody id="bodyTable">
+                        
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+        <div class="container">
+
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-white">
+        <div class="footer-copyright text-center py-3"><p class="navbar-brand">© 2021 Copyright</p></div>
+    </footer>
+</body>
+</html>
