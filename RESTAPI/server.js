@@ -83,26 +83,32 @@ app.delete('/product/:id', function (req, res) {
           }); 
         res.end(JSON.stringify(data));  
     });  
-})  
+})
 
+//---Customer---
 app.get('/customer', function (req, res) {  
     fs.readFile( `${__dirname}/data/customer.json`, 'utf8', function (err, data) {   
         res.end(JSON.stringify(JSON.parse(data),null,2));  
     });  
 });
+
 app.post('/customer', function (req, res) {  
     fs.readFile( `${__dirname}/data/customer.json`, 'utf8', function (err, data) {  
         data = JSON.parse(data);
         var max = 0;
-        var max = data.length === 0 ? 0 : data.reduce(function(prev, current) {
-            return (prev.Id > current.Id) ? prev.Id : current.Id
-        });
-        var newproduct = {Id:max+1,...req.body};
-        data.push(newproduct);
+        if(data.length >0){
+            var maxObject = data.reduce(function(prev, current) {
+                return (prev.Id > current.Id) ? prev : current
+            });
+            max = maxObject.Id;
+        }
+        
+        var newCustomer = {Id:max+1,...req.body};
+        data.push(newCustomer);
         fs.writeFile(`${__dirname}/data/customer.json`, JSON.stringify(data), function (err) {
             if (err) return console.log(err);
             console.log('Create customer success.');
-        }); 
+        });
         res.end(JSON.stringify(data));  
     });  
 })  
@@ -126,7 +132,7 @@ app.put('/customer/:id', function(req,res){
         fs.writeFile(`${__dirname}/data/customer.json`, JSON.stringify(data), function (err) {
             if (err) return console.log(err);
             console.log('Update customer success.');
-        }); 
+        });
         res.end(JSON.stringify(data));  
     });  
 });
@@ -145,33 +151,7 @@ app.delete('/customer/:id', function (req, res) {
           }); 
         res.end(JSON.stringify(data));  
     });  
-})  
-//#endregion
-
-//#region 
-app.get('/customer', function (req, res) {  
-    fs.readFile( `${__dirname}/data/customer.json`, 'utf8', function (err, data) {   
-        res.end(JSON.stringify(JSON.parse(data),null,2));  
-    });  
-});
-
-app.post('/customer', function (req, res) {  
-    fs.readFile( `${__dirname}/data/customer.json`, 'utf8', function (err, data) {  
-        data = JSON.parse(data);
-        var max = 0;
-        var max = data.length === 0 ? 0 : data.reduce(function(prev, current) {
-            return (prev.Id > current.Id) ? prev.Id : current.Id
-        });
-        var newproduct = {Id:max+1,...req.body};
-        data.push(newproduct);
-        fs.writeFile(`${__dirname}/data/customer.json`, JSON.stringify(data), function (err) {
-            if (err) return console.log(err);
-            console.log('Create product success.');
-        }); 
-        res.end(JSON.stringify(data));  
-    });  
-})  
-//#endregion
+})
 
 app.post('/auth', function (req, res) {  
     fs.readFile( `${__dirname}/data/customer.json`, 'utf8', function (err, data) {  
